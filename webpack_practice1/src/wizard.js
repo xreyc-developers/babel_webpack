@@ -1,0 +1,1 @@
+export const wizard = "Reyco Seguma"

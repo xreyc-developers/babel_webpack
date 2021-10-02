@@ -1,0 +1,49 @@
+# INITIALIZE NPM
+npm init-y
+
+# INSTALL WEBPACK
+npm i -D webpack webpack-cli
+npm i -D webpack-dev-server (live server for bundler objects)
+
+# BUNDLE FILES
+npx webpack
+* WITHOUT CONFIGURATION
+- all unused code will be automatically removed by webpack
+- all js files will be bundled into main.js
+- everything will be optimized
+- some variables will be removed and direct input into the function
+
+# PUT WEBPACK COMMAND TO SCRIPT
+- instead of running npx webpack
+- put it inside the package json script
+* WE CALL npm run build EVERYTIME
+"scripts": {
+    "build": "webpack"
+}
+* AUTOMATICALLY BUNDLES YOU CODE EVERY CHANGE
+"scripts": {
+  "build": "webpack --watch"
+}
+* LIVE SERVER
+"scripts": {
+  "start": "webpack serve"
+}
+** COMPLETE
+"scripts": {
+  "start": "webpack serve", (SERVES A LIVE SERVER)
+  "build": "NODE_ENV=production webpack", (BUILD FOR PRODUCTION)
+  "build-dev": "webpack --watch" (BUILD FOR DEVELOPMENT)
+},
+
+
+# LIVE SERVER
+- on webpack.config.js
+devServer: {
+  contentBase: "./dist"
+}
+
+# INSTALL BABEL
+npm i @babel/core @babel/preset-env babel-loader
+- babel/core (the core functionality of babel)
+- babel/preset-env (specific preset from babel that coverts to javascript version)
+- babel-loader (baber lirary for other type of file)

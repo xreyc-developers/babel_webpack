@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Reyco Seguma"),console.log("Niclaus Michaelson")})();

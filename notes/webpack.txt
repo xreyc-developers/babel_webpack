@@ -1,0 +1,51 @@
+## WEBPACK
+- a code buldler
+- transpiling with babel
+- tree shaking (elimination of dead code)
+- minification
+- asset management
+- and many more
+
+- webpack by default looks for an src folder
+
+## INSTALL WEBPACK AND CLI
+npm i -D webpack webpack-cli (for webpack commands)
+npm i -D html-webpack-plugin html-loader (for webpack to include html)
+npm i -D webpack-dev-server
+
+# PACKAGE JSON
+"scripts": {
+    "build": "webpack",
+    "start:dev": webpack-dev-server"
+}
+
+# RUN BUILD
+direct: webpack
+script: npm run build
+
+WORKFLOW
+-----------------------------------------------------------------------------------
+# INITIALIZE NPM
+npm init-y
+
+# INSTALL WEBPACK
+npm i -D webpack webpack-cli
+
+# BUNDLE FILES
+npx webpack
+* WITHOUT CONFIGURATION
+- all unused code will be automatically removed by webpack
+- all js files will be bundled into main.js
+- everything will be optimized
+- some variables will be removed and direct input into the function
+
+# PUT WEBPACK COMMAND TO SCRIPT
+- instead of running npx webpack
+- put it inside the package json script
+"scripts": {
+    "build": "webpack"
+}
+
+## NOTES
+- files should be on the src folder (default)
+- it best practice to put webpack command on JSON script
