@@ -1,0 +1,77 @@
+## BABEL
+- it converts specific version of javascript into a defined version of javascript
+- it takes an input and an output
+- babel on its own doesn't do anything, it need plugins
+- plugins help babel to convert javascript in an specific version of javascript
+
+# HOW BABEL WORKS
+- takes your sources code as input
+- uses a parser named babylon
+- converts it to AST (abstract syntax tree)
+- transform it into a modified code
+- generate a new output javascript
+
+# PRESETS
+- a group of plugins that babel uses for its transpilation
+- you can see how to install it and its configuration
+* OFFICIAL PRESETS
+    - @babel/preset-env
+    - @babel/preset-flow
+    - @babel/preset-react
+    - @babel/preset-typescript
+
+# INSTALLATION
+npm init --yes
+npm i --save-dev babel-cli babel-preset-env
+
+# BABEL-PRESET
+- is a set of babel-preset
+# BABEL-CLI
+- use to run command line interface for babel
+
+# SETUP/CONFIGURATION
+    @PACKAGE JSON
+    - a script the will run the babel command
+    "scripts": {
+        "build": "babel src -d js"
+    }
+    * FOLDER AND FILENAME
+        babel SOURCE_FOLDER -d DESTINATION_FOLDER
+    * ONE SINGLE FILENAME (COMBINE ALL JS INTO A SINGLE FILE)
+        babel SOURCE_FOLDER -d DESTINATION_FOLDER/filename
+
+    @FILENAME CONFIGURATION
+    * CREATE THE BABEL FILE
+    touch .babelrc
+    or manually create the file
+    * INSIDE THE FILE
+    - it converts all the version of javascript
+    {
+        "presets" ["env"]
+    }
+    - for specific version
+    {
+        "presets" ["es2015", "es2016", "es2017"]
+    }
+
+    * WITH TARGETS
+    {
+        "presets" [
+            "env",
+            {
+                "targets": {
+                    "node": "6.10"
+                    "chrome": "52", // specific version
+                    "ie": "11"
+                }
+            }
+        ]
+    }
+
+## CREATE THE BUILD
+npm run build
+
+
+
+# RESOURCES
+https://babeljs.io/docs/en/presets
