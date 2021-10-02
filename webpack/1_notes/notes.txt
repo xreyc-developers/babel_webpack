@@ -1,0 +1,26 @@
+## COMMON PROBLEMS
+- common problem on developing application is a lot of files to be loaded
+- we have to include a lot to the HTML file on loading our javascript
+- what if we have 10 scripts that have to be loaded in order, we will have a
+big problem since code will start to look complicated
+
+## INSTALLATION
+npm i webpack webpack-cli --save-dev
+
+## LOADERS
+npm install svg-inline-loader --save-dev  (SVG IMAGE)
+npm install css-loader --save-dev  (CSS FILE)
+npm install style-loader --save-dev  (CSS FILE)
+npm install -D babel-loader @babel/core @babel/preset-env webpack  (BABEL)
+npm install babel-loader --save-dev (BABEL - this is enough)
+
+## PLUGINS 
+npm install --save-dev html-webpack-plugin (this will insert the OUTPUT BUNDLE JS to HTML)
+
+## DEV SERVER
+npm install webpack-dev-server --save-dev
+
+## MODES
+mode: "production"
+mode: "development"
+
