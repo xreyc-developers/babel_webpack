@@ -1,5 +1,9 @@
-import { wizard } from './wizard.js'
-import { barbarian } from './barbarian.js'
+import { wizard } from './modules/wizard.js'
+import { barbarian } from './modules/barbarian.js'
+
+//require('./index.css');
+//import "./index.css"
+import './main.css';
 
 const getUserId = (username) => {
     if(username == "xreyc") return 1
