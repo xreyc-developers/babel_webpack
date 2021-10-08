@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+const TerserPlugin = require("terser-webpack-plugin");
+const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
 module.exports = {
     // SET IF ITS READY FOR PRODUCTION
@@ -48,8 +49,10 @@ module.exports = {
         ]
     },
     optimization: {
+        minimize: true,
         minimizer: [
           new CssMinimizerPlugin(),
+          new TerserPlugin()
         ],
     },
     plugins: [
